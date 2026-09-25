@@ -1,15 +1,3 @@
-body {
-    background-color: black;
-    color: white;
-}
-
-body.dark {
-    background-color: white;
-    color: black;
-}
-
-
-
 
 .loader {
   --color-1: #fff;
