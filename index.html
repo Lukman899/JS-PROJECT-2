@@ -64,10 +64,8 @@
                     and find what to watch tonight with MovieHub.
                 </p>
 
-                <a
-                    href="#search"
-                    class="mt-8 inline-block rounded-md bg-red-600 px-6 py-3 font-semibold text-white transition-all duration-200 hover:bg-red-700"
-                >
+                <a href="#search"
+                    class="mt-8 inline-block rounded-md bg-red-600 px-6 py-3 font-semibold text-white transition-all duration-200 hover:bg-red-700">
                     Search Now ↓
                 </a>
 
@@ -77,10 +75,7 @@
 
 
         <!-- SEARCH SECTION -->
-        <section
-            id="search"
-            class="flex min-h-screen items-center justify-center"
-        >
+        <section id="search" class="flex min-h-screen items-center justify-center">
 
             <div class="w-full max-w-2xl">
 
@@ -98,32 +93,19 @@
 
 
                 <form id="movieForm">
-
-                    <div class="flex flex-col gap-3 sm:flex-row">
-
-                        <input
-                            id="movieInput"
-                            type="text"
+                    <div class="flex gap-3">
+                        <input id="movieInput" type="text"
                             placeholder="Search movie title (e.g. Inception, The Matrix)..."
-                            class="h-11 w-full rounded-md border border-gray-700 bg-gray-900 px-4 text-white outline-none sm:flex-1"
-                        >
+                            class="h-11 flex-1 rounded-md border border-gray-700 bg-gray-900 px-4 text-white outline-none">
 
-                        
+                        <button type="submit"
+                            class="h-11 rounded-md bg-red-600 px-6 font-semibold text-white hover:bg-red-700">
+                            Search
+                        </button>
                     </div>
-                    
                 </form>
-                
-                <button
-                    type="submit"
-                    class="h-11 rounded-md bg-red-600 px-6 font-semibold text-white hover:bg-red-700"
-                >
-                    Search
-                </button>
 
-                <div
-                    id="movieHub"
-                    class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
-                ></div>
+                <div id="movieHub" class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
 
             </div>
 
