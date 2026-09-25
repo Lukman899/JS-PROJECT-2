@@ -1,17 +1,3 @@
-const themeBtn = document.querySelector("#themeBtn");
-
-themeBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-
-    if (document.body.classList.contains("dark-mode")) {
-        themeBtn.innerText = "🌙";
-    } else {
-        themeBtn.innerText = "☀️";
-    }
-});
-
-
-
 const movieForm = document.querySelector("#movieForm");
 const movieInput = document.querySelector("#movieInput");
 const movieHub = document.querySelector("#movieHub");
