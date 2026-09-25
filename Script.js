@@ -16,17 +16,17 @@ async function searchMovies(movieName) {
 
     movieHub.innerHTML = `<span class="loader"></span>`
 
-    let response = await fetch(`http://www.omdbapi.com/?apikey=676f2cc7&s=${movieName}`);
+    let response = await fetch(`https://www.omdbapi.com/?apikey=676f2cc7&s=${movieName}`);
     let data = await response.json()
+
     console.log(data);
 
     if (data.Response === "True") {
         displayMovies(data.Search)
-    }else{
+    } else {
         console.log(data.Error);
         movieHub.innerHTML = `<p>${data.Error}</p>`
     }
-
 }
 
 function displayMovies(movies) {
