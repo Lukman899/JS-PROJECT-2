@@ -5,19 +5,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Hub</title>
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="output.css">
 </head>
 
-<body>
-    <h1>Movie Hub</h1>
-    <div>
-        <form id="movieForm" action="">
-            <input id="movieInput" type="text" placeholder="Search movie title (e.g. Inception, The Matrix)...">
-            <button>Search</button>
-        </form>
-    </div>
-    <div id="movieHub"></div>
+<body class="bg-black text-white">
+
+    <header class="fixed inset-x-0 top-0 z-10 border-b border-(--border-subtle) bg-(--navbar-bg) backdrop-blur-xs">
+        <nav class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+
+            <a href="#" class="font-bold">
+                Movies <span class="text-red-600">Hub</span>
+            </a>
+
+            <ul class="hidden items-center gap-6 text-sm font-bold text-(--text-3) md:flex">
+                <li class="cursor-pointer transition-all duration-200 hover:text-(--text-1)">
+                    Home
+                </li>
+
+                <li class="cursor-pointer transition-all duration-200 hover:text-(--text-1)">
+                    About
+                </li>
+
+                <li class="cursor-pointer transition-all duration-200 hover:text-(--text-1)">
+                    Search
+                </li>
+
+                <li class="cursor-pointer transition-all duration-200 hover:text-(--text-1)">
+                    Contact
+                </li>
+
+                <li>
+                    <button id="themeBtn" type="button">🌙</button>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <main class="mx-auto max-w-6xl px-4 pt-16 sm:px-6">
+
+        <!-- HERO SECTION -->
+        <section class="flex min-h-[calc(100vh-4rem)] items-center justify-center text-center">
+
+            <div class="max-w-2xl">
+
+                <h1 class="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+                    Discover Your Next
+                    <span class="block text-red-600">
+                        Favorite Movie
+                    </span>
+                </h1>
+
+                <p class="mt-5 text-sm text-gray-400 sm:text-base">
+                    Search for trending cinema, look up ratings and reviews,
+                    and find what to watch tonight with MovieHub.
+                </p>
+
+                <a
+                    href="#search"
+                    class="mt-8 inline-block rounded-md bg-red-600 px-6 py-3 font-semibold text-white transition-all duration-200 hover:bg-red-700"
+                >
+                    Search Now ↓
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEARCH SECTION -->
+        <section
+            id="search"
+            class="flex min-h-screen items-center justify-center"
+        >
+
+            <div class="w-full max-w-2xl">
+
+                <div class="mb-8 text-center">
+
+                    <h2 class="text-3xl font-bold sm:text-4xl">
+                        Search Movies
+                    </h2>
+
+                    <p class="mt-3 text-sm text-gray-400 sm:text-base">
+                        Type a title to search for films, view ratings, and discover new stories.
+                    </p>
+
+                </div>
+
+
+                <form id="movieForm">
+
+                    <div class="flex flex-col gap-3 sm:flex-row">
+
+                        <input
+                            id="movieInput"
+                            type="text"
+                            placeholder="Search movie title (e.g. Inception, The Matrix)..."
+                            class="h-11 w-full rounded-md border border-gray-700 bg-gray-900 px-4 text-white outline-none sm:flex-1"
+                        >
+
+                        <button
+                            type="submit"
+                            class="h-11 rounded-md bg-red-600 px-6 font-semibold text-white hover:bg-red-700"
+                        >
+                            Search
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <div
+                    id="movieHub"
+                    class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+                ></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
     <script src="script.js"></script>
+
 </body>
 
 </html>

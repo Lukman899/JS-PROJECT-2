@@ -1,3 +1,17 @@
+const themeBtn = document.querySelector("#themeBtn");
+
+themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+        themeBtn.innerText = "🌙";
+    } else {
+        themeBtn.innerText = "☀️";
+    }
+});
+
+
+
 const movieForm = document.querySelector("#movieForm");
 const movieInput = document.querySelector("#movieInput");
 const movieHub = document.querySelector("#movieHub");
